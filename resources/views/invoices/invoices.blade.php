@@ -116,18 +116,25 @@
                 <div class="card mg-b-20">
                     <div class="card-header pb-0">
                         <div class="d-flex justify-content-between">
-                            <h4 class="card-title mg-b-0">Bordered Table</h4>
-                            <i class="mdi mdi-dots-horizontal text-gray"></i>
+                            <span >
+                                <h4 class="card-title mg-b-0">Invoices Table</h4>
+                                <p class="tx-12 tx-gray-500 mb-2">your in inoices table.. <a href="">Learn more</a>
+                                </p>
+<br>
+                                @can('اضافة فاتورة')
+                                <a href="{{ route('invoices.create') }}" class="modal-effect btn btn-sm btn-success"
+                                    style="color:white"><i class="fas fa-plus"></i>&nbsp; اضافة فاتورة</a>
+                            @endcan
+                            </span>
+                       
+                            <img src="{{ URL::asset('assets/img/images (3).jpg')}}" alt="" height="130rem">
+                            {{-- <i class="mdi mdi-dots-horizontal text-gray"></i> --}}
                         </div>
-                        <p class="tx-12 tx-gray-500 mb-2">Example of Valex Bordered Table.. <a href="">Learn more</a>
-                        </p>
+                      
                     </div>
 
                     <div class="card-header pb-0">
-                        @can('اضافة فاتورة')
-                            <a href="{{ route('invoices.create') }}" class="modal-effect btn btn-sm btn-success"
-                                style="color:white"><i class="fas fa-plus"></i>&nbsp; اضافة فاتورة</a>
-                        @endcan
+                   
                         {{-- 				
 								@can('تصدير EXCEL')
 									<a class="modal-effect btn btn-sm btn-primary" href="{{ url('export_invoices') }}"
@@ -153,8 +160,9 @@
                                         <th class="border-bottom-0">قيمة الضريبه</th>
                                         <th class="border-bottom-0">اجمالي</th>
                                         <th class="border-bottom-0"> الحالة</th>
-                                        <th class="border-bottom-0"> الملاحظات</th>
+                                      
                                         <th class="border-bottom-0"> العملية</th>
+                                        <th class="border-bottom-0"> الملاحظات</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -189,7 +197,7 @@
                                                 @endif
                                             </td>
 
-                                            <td>{{ $invoice->note }}</td>
+                                          
 
                                             <td>
 
@@ -254,7 +262,7 @@
                                             </td>
 
 
-
+                                            <td>{{ $invoice->note }}</td>
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -302,15 +310,15 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content modal-content-demo">
                 <div class="modal-header">
-                    <h6 class="modal-title">حذف القسم</h6><button aria-label="Close" class="close" data-dismiss="modal"
+                    <h6 class="modal-title">ارشيف القسم</h6><button aria-label="Close" class="close" data-dismiss="modal"
                         type="button"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <form action="invoices/destroy" method="post">
                     {{ method_field('delete') }}
                     @csrf
                     <div class="modal-body">
-                        <p>هل انت متاكد من عملية الحذف ؟</p><br>
-                        <input type="hidden" name="id" id="id" value="2">
+                        <p>هل انت متاكد من عملية الارشفة ؟</p><br>
+                        <input type="hidden" name="id" id="id" value="">
                         <input type="hidden" name="page_id" id="page_id" value="2">
                         <input class="form-control" name="invoice_number" id="invoice_number" type="text" readonly>
                     </div>

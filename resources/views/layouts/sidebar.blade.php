@@ -1,4 +1,7 @@
 <!-- Sidebar-right-->
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&family=Changa:wght@200&display=swap');
+	</style>
 		<div class="sidebar sidebar-left sidebar-animate">
 			<div class="panel panel-primary card mb-0 box-shadow">
 				<div class="tab-menu-heading border-0 p-3">

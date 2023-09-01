@@ -38755,9 +38755,9 @@ button.bg-dark:hover, button.bg-dark:focus {
   background-color: #fce1e7 !important;
 }
 
-.bg-primary-transparent {
-  background-color: #d9e8fc !important;
-}
+ .bg-primary-transparent {
+  background-color: #fff !important;
+} 
 
 .bg-secondary-transparent {
   background-color: rgba(250, 92, 124, 0.13) !important;

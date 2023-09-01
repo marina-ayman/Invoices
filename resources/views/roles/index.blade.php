@@ -11,6 +11,9 @@
 @endsection
 @section('page-header')
 <!-- breadcrumb -->
+<div style="text-align: center">
+    <img src="{{ URL::asset('assets/img/invoice-payments-4032868-3379813 (1).png')}}" style="width:25rem;"  alt="" >
+    </div>
 <div class="breadcrumb-header justify-content-between">
     <div class="my-auto">
         <div class="d-flex">

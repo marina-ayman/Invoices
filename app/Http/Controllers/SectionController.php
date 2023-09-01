@@ -116,6 +116,7 @@ class SectionController extends Controller
      */
     public function update(Request $request)
     {
+      
         $id=$request->id;
 
         $this->validate($request,[
@@ -127,7 +128,7 @@ class SectionController extends Controller
             'description.required' => 'الوصف مطلوب'
         ]);
 
-        $sections=products::find($id);
+          $sections = section::find($id);
         $sections->update([
             'section_name'=> $request->section_name,
             'description'=> $request->description,
@@ -147,7 +148,7 @@ class SectionController extends Controller
     public function destroy(Request $request)
     {
         $id=$request->id;
-        $sections=section::find($id)->delete();
+     section::find($id)->delete();
         session()->flash('delete','تم حذف القسم بنجاح');
         return redirect('/sections');
     }

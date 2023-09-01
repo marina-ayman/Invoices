@@ -17,3 +17,6 @@
 <link href="{{URL::asset('assets/css-rtl/style-dark.css')}}" rel="stylesheet">
 <!---Skinmodes css-->
 <link href="{{URL::asset('assets/css-rtl/skin-modes.css')}}" rel="stylesheet">
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&family=Changa:wght@200&display=swap');
+	</style>

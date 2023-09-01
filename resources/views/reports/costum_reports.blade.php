@@ -18,8 +18,12 @@
     تقرير العملاء - مورا سوفت للادارة الفواتير
 @stop
 @endsection
+
 @section('page-header')
 <!-- breadcrumb -->
+
+<img src="{{ URL::asset('/assets/img/e-invoice.png') }}" alt="" >
+
 <div class="breadcrumb-header justify-content-between">
     <div class="my-auto">
         <div class="d-flex">

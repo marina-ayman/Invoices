@@ -18,7 +18,7 @@ class Invoices_ReportController extends Controller
 
         $rdio = $request->rdio;
 
-
+// dd($request);
         // في حالة البحث بنوع الفاتورة
 
         if ($rdio == 1) {
@@ -27,14 +27,17 @@ class Invoices_ReportController extends Controller
             // في حالة عدم تحديد تاريخ
             if ($request->type && $request->start_at == '' && $request->end_at == '') {
 
+               
                 if ($request->type == 'all') {
                     $invoices = invoices::select('*')->get();
                     $type = $request->type;
                     return view('reports.invoices_report', compact('type'))->withDetails($invoices);
+                
                 } else {
                     $invoices = invoices::select('*')->where('Status', '=', $request->type)->get();
                     $type = $request->type;
                     return view('reports.invoices_report', compact('type'))->withDetails($invoices);
+                 
                 }
             }
 
@@ -46,7 +49,7 @@ class Invoices_ReportController extends Controller
                     $start_at = date($request->start_at);
                     $end_at = date($request->end_at);
                     $type = $request->type;
-
+                 
                     $invoices = invoices::select('*')->whereBetween('invoice_Date', [$start_at, $end_at])->get();
                     return view('reports.invoices_report', compact('type', 'start_at', 'end_at'))->withDetails($invoices);
                 } else {

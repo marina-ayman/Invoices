@@ -261,11 +261,11 @@ class InvoicesController extends Controller
 
                 Storage::disk('public_uploads')->deleteDirectory($Details->invoice_number);
             }
-
+            if ($request->page_id == 1) {
 
             $invoices->forceDelete(); //مينفعش ارجعها dbهيمسح الداتا من ال 
             // $invoices->Delete();  هيمسحها لاكن هتكون موجوده ف الداتا بيز
-            session()->flash('delete_invoices');
+            session()->flash('delete_invoices');}
         }
         return redirect('/invoices');
     }

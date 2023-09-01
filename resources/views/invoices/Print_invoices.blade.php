@@ -38,7 +38,7 @@
                                 <h6>BootstrapDash, Inc.</h6>
                                 <p>201 Something St., Something Town, YT 242, Country 6546<br>
                                     Tel No: 324 445-4544<br>
-                                    Email: youremail@companyname.com</p>
+                                    Email: marinaayman@companyname.com</p>
                             </div><!-- billed-from -->
                         </div><!-- invoice-header -->
                         <div class="row mg-t-20">

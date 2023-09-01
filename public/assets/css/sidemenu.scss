@@ -722,7 +722,7 @@ slide is-expanded side-menu__item {
     left: 0;
 }
 .app-sidebar .side-item.side-item-category {
-    color: #2c364c;
+    color: #bcbcbc;
     font-size: 11px;
     text-transform: uppercase;
     font-weight: 700;
@@ -1328,16 +1328,16 @@ slide is-expanded side-menu__item {
 
   .slide {
     &.active .side-menu__icon, &.is-expanded .side-menu__icon {
-      fill: #277aec  !important;
+      fill: #e3e7ec  !important;
     }
 
     &.active {
       .side-menu__icon {
-        fill: #277aec  !important;
+        fill: #99c4ff  !important;
       }
 
       .side-menu__item {
-        color: #277aec  !important;
+        color: #ffffff  !important;
       }
     }
   }
@@ -1540,5 +1540,5 @@ slide is-expanded side-menu__item {
 	}
 }
 .dark-theme .side-menu__item.active .side-menu__icon{
-	fill:#106ef1;
+	fill:#c2dbfd;
 }

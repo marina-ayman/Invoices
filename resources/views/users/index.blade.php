@@ -18,6 +18,9 @@
 @endsection
 @section('page-header')
 <!-- breadcrumb -->
+<div style="text-align: center">
+<img src="{{ URL::asset('assets/img/taxreply-554.png')}}" style="width:30rem;"  alt="" >
+</div>
 <div class="breadcrumb-header justify-content-between">
     <div class="my-auto">
         <div class="d-flex">

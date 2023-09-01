@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Changa:wght@200&display=swap');
 /*------------------------------------------------------------------
 [Master Stylesheet]
 
@@ -82,7 +84,8 @@ License        :   Licensed under ThemeForest License
 */
 /* ######## FONT ######## */
 /* ############### FONTS IMPORT ############### */
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
+/* @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900"); */
+
 /* ######## BOOTSTRAP ######## */
 /*Color variables*/
 /*gray variables*/
@@ -26486,7 +26489,7 @@ button.bg-dark:hover, button.bg-dark:focus {
   background-color: #fce1e7 !important; }
 
 .bg-primary-transparent {
-  background-color: #d9e8fc !important; }
+  background-color: #fff !important; }
 
 .bg-secondary-transparent {
   background-color: rgba(250, 92, 124, 0.13) !important; }
@@ -52544,3 +52547,4 @@ a.text-dark:hover, a.text-dark:focus {
   width: 100vw; }
 
 /*# sourceMappingURL=style.css.map */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Changa:wght@200&display=swap');

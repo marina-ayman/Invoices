@@ -17,23 +17,23 @@ class InvoiceAchiveController extends Controller
     public function destroy(Request $request)
     {
         $id = $request->id;
-        $invoices = invoices::withTrashed()->where('id', $id)->first();
-        $invoices->forceDelete();
+        if ($request->page_id == 1) {
+       
+          $invoices = invoices::withTrashed()->where('id', $id)->first();
+          $invoices->forceDelete();
 
-        session()->flash('delete_invoice');
-        return redirect('/Arctive_Invoices');
-    }
+         session()->flash('delete_invoice');
+        }
 
-    public function update(Request $request)
-    {
-        $id = $request->id;
-        $invoices = invoices::withTrashed()->where('id', $id)->first();
-        $invoices->update([
-            'deleted_at' => null,
+        elseif($request->page_id == 2){
+   
+            $invoices = invoices::withTrashed()->where('id', $id)->first()->restore();
+       
+        // dd( $invoices);
+            session()->flash('archive_invoice');
+         
+        }
+    
 
-        ]);
-      
-        session()->flash('archive_invoice');
-        return redirect('/Arctive_Invoices');
-    }
-}
+    return redirect('/Arctive_Invoices');
+} }

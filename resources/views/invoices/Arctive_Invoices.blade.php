@@ -18,7 +18,7 @@
 				<div class="breadcrumb-header justify-content-between">
 					<div class="my-auto">
 						<div class="d-flex">
-							<h4 class="content-title mb-0 my-auto">فواتير</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">قائمة الفواتير</span>
+							<h4 class="content-title mb-0 my-auto">فواتير</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">قائمة الفواتير المؤرشفة</span>
 						</div>
 					</div>
 				
@@ -66,7 +66,7 @@
 <script>
     window.onload = function() {
         notif({
-            msg: "تم أرشفة الفاتورة بنجاح",
+            msg: "تم الغاء أرشفة الفاتورة بنجاح",
             type: "success"
         })
     }
@@ -98,16 +98,22 @@
 							<div class="card mg-b-20">
 								<div class="card-header pb-0">
 									<div class="d-flex justify-content-between">
-										<h4 class="card-title mg-b-0">Bordered Table</h4>
-										<i class="mdi mdi-dots-horizontal text-gray"></i>
+										<span>
+											<h4 class="card-title mg-b-0">Bordered Table</h4>
+											<p class="tx-12 tx-gray-500 mb-2">Example of Valex Bordered Table.. <a href="">Learn
+													more</a></p>
+											<br>
+			
+										
+									<a href="{{ route('invoices.create') }}" class="modal-effect btn btn-sm btn-success" style="color:white"><i
+										class="fas fa-plus"></i>&nbsp; اضافة فاتورة</a>
+										</span>
+										<img src="{{ URL::asset('assets/img/images (2).jpg') }}" alt="" height="140rem">
 									</div>
-									<p class="tx-12 tx-gray-500 mb-2">Example of Valex Bordered Table.. <a href="">Learn more</a></p>
 								</div>
 
 								<div class="card-header pb-0">
 									
-									<a href="{{ route('invoices.create') }}" class="modal-effect btn btn-sm btn-success" style="color:white"><i
-											class="fas fa-plus"></i>&nbsp; اضافة فاتورة</a>
 							
 {{-- 				
 								@can('تصدير EXCEL')
@@ -134,8 +140,9 @@
 													<th class="border-bottom-0">قيمة الضريبه</th>
 													<th class="border-bottom-0">اجمالي</th>
 													<th class="border-bottom-0"> الحالة</th>
-													<th class="border-bottom-0"> الملاحظات</th>
+												
 													<th class="border-bottom-0"> العملية</th>
+													<th class="border-bottom-0"> الملاحظات</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -167,8 +174,7 @@
 												@endif
 													</td>
 
-													<td>{{ $invoice->note }}</td>
-												
+											
 													<td>
 
 														<div class="dropdown">
@@ -197,7 +203,8 @@
 													</td>
 												
 												
-													
+													<td>{{ $invoice->note }}</td>
+												
 												</tr>
 											@endforeach
 											</tbody>
@@ -226,6 +233,7 @@
 							{{ method_field('delete') }}
 							{{ csrf_field() }}
 							<div class="modal-body">
+								<input type="hidden" name="page_id" id="page_id" value="1">
 								<p>هل انت متاكد من عملية الحذف ؟</p><br>
 								<input type="hidden" name="id" id="id" value="">
 								<input class="form-control" name="invoice_number" id="invoice_number" type="text" readonly>
@@ -250,6 +258,7 @@
 						<form action="Arctive_Invoices/update" method="post">
 							{{ method_field('delete') }}
 							{{ csrf_field() }}
+							<input type="hidden" name="page_id" id="page_id" value="2">
 							<div class="modal-body">
 								<p>هل انت متاكد من الغاء ارشفة هذه الصورة ؟</p><br>
 								<input type="hidden" name="id" id="id" value="">

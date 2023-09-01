@@ -18,7 +18,7 @@
 				<div class="breadcrumb-header justify-content-between">
 					<div class="my-auto">
 						<div class="d-flex">
-							<h4 class="content-title mb-0 my-auto">فواتير</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">قائمة الفواتير</span>
+							<h4 class="content-title mb-0 my-auto">فواتير</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">قائمة الفواتير المدفوعه</span>
 						</div>
 					</div>
 				
@@ -107,17 +107,21 @@
 							<div class="card mg-b-20">
 								<div class="card-header pb-0">
 									<div class="d-flex justify-content-between">
+										<span>
 										<h4 class="card-title mg-b-0">Bordered Table</h4>
-										<i class="mdi mdi-dots-horizontal text-gray"></i>
+										<p class="tx-12 tx-gray-500 mb-2">Example of Valex Bordered Table.. <a href="">Learn more</a></p>
+								<br>
+								<a href="{{ route('invoices.create') }}" class="modal-effect btn btn-sm btn-success" style="color:white"><i
+									class="fas fa-plus"></i>&nbsp; اضافة فاتورة</a>
+					
+									</span>
+										<img src="{{ URL::asset('assets/img/images.png')}}" alt="" height="130rem">
 									</div>
-									<p class="tx-12 tx-gray-500 mb-2">Example of Valex Bordered Table.. <a href="">Learn more</a></p>
-								</div>
+							</div>
 
 								<div class="card-header pb-0">
 									
-									<a href="{{ route('invoices.create') }}" class="modal-effect btn btn-sm btn-success" style="color:white"><i
-											class="fas fa-plus"></i>&nbsp; اضافة فاتورة</a>
-							
+								
 {{-- 				
 								@can('تصدير EXCEL')
 									<a class="modal-effect btn btn-sm btn-primary" href="{{ url('export_invoices') }}"
@@ -143,8 +147,9 @@
 													<th class="border-bottom-0">قيمة الضريبه</th>
 													<th class="border-bottom-0">اجمالي</th>
 													<th class="border-bottom-0"> الحالة</th>
-													<th class="border-bottom-0"> الملاحظات</th>
+													
 													<th class="border-bottom-0"> العملية</th>
+													<th class="border-bottom-0"> الملاحظات</th>
 												</tr>
 											</thead>
 											<tbody>
@@ -176,7 +181,7 @@
 												@endif
 													</td>
 
-													<td>{{ $invoice->note }}</td>
+											
 												
 													<td>
 
@@ -211,7 +216,7 @@
 														
 						  
 													</td>
-												
+													<td>{{ $invoice->note }}</td>
 												
 													
 												</tr>

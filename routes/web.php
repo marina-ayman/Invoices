@@ -41,6 +41,7 @@ Route::resource('InvoiceAttachments', InvoicesAttachmentsController::class);
 Route::resource('invoices', InvoicesController::class);
 Route::resource('sections', SectionController::class);
 Route::resource('products', ProductsController::class);
+
 Route::resource('Arctive_Invoices', InvoiceAchiveController::class);
 Route::post('delete_file', [InvoicesDetailsController::class,'destroy'])->name('delete_file');
 

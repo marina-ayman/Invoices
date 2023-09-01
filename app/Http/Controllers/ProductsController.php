@@ -130,7 +130,8 @@ class ProductsController extends Controller
      */
     public function destroy(Request $request)
     {
-        $id=$request->id;
+        $id=$request->pro_id;
+      
         products::find($id)->delete();
         session()->flash('delete','تم حذف المنتج بنجاح');
         return redirect('/products');

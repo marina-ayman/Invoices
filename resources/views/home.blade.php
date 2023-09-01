@@ -9,11 +9,14 @@
     <link href="{{ URL::asset('assets/plugins/jqvmap/jqvmap.min.css') }}" rel="stylesheet">
 @endsection
 @section('page-header')
+{{-- <img src="{{ URL::asset('')}}" alt="" > --}}
+<img src="{{ URL::asset('assets/img/a-businessman-pressing-an-invoice-button-on-a-transparent-screen-HTAW91.jpg')}}" style="width:fit-content;"  alt="" >
+
     <!-- breadcrumb -->
     <div class="breadcrumb-header justify-content-between">
         <div class="left-content">
             <div>
-                <h2 class="main-content-title tx-24 mg-b-1 mg-b-lg-1">Hi, welcome back!</h2>
+                <h2 class="main-content-title tx-24 mg-b-1 mg-b-lg-1">Hi, welcome {{ Auth::user()->name }}</h2>
                 <p class="mg-b-0">Sales monitoring dashboard template.</p>
             </div>
         </div>
@@ -191,6 +194,30 @@
     <!-- row closed -->
 
     <!-- row opened -->
+
+    
+
+    <div class="row row-sm">
+
+        <div class="col-md-12 col-lg-12 col-xl-7">
+            
+            <img src="{{ URL::asset('assets/img/invoice-payments-4032868-3379813 (1).png')}}" height="320erm" width="550rem">
+ 
+        </div>
+    
+     <div class="col-lg-12 col-xl-5">
+        <div class="card card-dashboard-map-one" style="height:330erm">
+            <label class="main-content-label">نسبة احصائية الفواتير</label>
+            <div class="" style="width: 100%">
+                 {!! $chartjs_2->render() !!}
+            </div>
+        </div>
+        </div>
+
+
+  
+    </div>
+
     <div class="row row-sm">
         <div class="col-md-12 col-lg-12 col-xl-7">
             <div class="card">
@@ -209,14 +236,13 @@
         </div>
         
      <div class="col-lg-12 col-xl-5">
-            <div class="card card-dashboard-map-one">
-                <label class="main-content-label">نسبة احصائية الفواتير</label>
-                <div class="" style="width: 100%">
-                     {!! $chartjs_2->render() !!}
-                </div>
-            </div>
+        <div class="card">
+          <img src="{{ URL::asset('assets/img/facture-44848148.webp')}}" height="320erm" >
+        </div>
         </div>
     </div>
+
+
     <!-- row closed -->
     </div>
     </div>

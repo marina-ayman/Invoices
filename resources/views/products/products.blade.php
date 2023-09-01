@@ -14,6 +14,7 @@
     <link href="{{ URL::asset('assets/plugins/multislider/multislider.css') }}" rel="stylesheet">
     <!--- Select2 css -->
     <link href="{{ URL::asset('assets/plugins/select2/css/select2.min.css') }}" rel="stylesheet">
+   
 @endsection
 @section('title')
     المنتجات
@@ -21,6 +22,11 @@
 
 @section('page-header')
     <!-- breadcrumb -->
+
+    <div style="text-align: center">
+        <img src="{{ URL::asset('assets/img/how-to-generate-e-invoices-instantly-with-tallyprime-in-saudi-arabia.jpg')}}" style="width:25rem;"  alt="" >
+        </div>
+        
     <div class="breadcrumb-header justify-content-between">
         <div class="my-auto">
             <div class="d-flex">
@@ -249,7 +255,7 @@
                         {{ csrf_field() }}
                         <div class="modal-body">
                             <p>هل انت متاكد من عملية الحذف ؟</p><br>
-                            <input type="hidden" name="pro_id" id="pro_id" value="">
+                            <input type="hidden" name="pro_id" id="pro_id">
                             <input class="form-control" name="name" id="name" type="text" readonly>
                         </div>
                         <div class="modal-footer">

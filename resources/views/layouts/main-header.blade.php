@@ -1,4 +1,7 @@
 <!-- main-header opened -->
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&family=Changa:wght@200&display=swap');
+	</style>
 			<div class="main-header sticky side-header nav nav-item">
 				<div class="container-fluid">
 					<div class="main-header-left ">
